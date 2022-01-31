@@ -10,6 +10,11 @@ namespace ModeloDB
 {
     public class NominaDB:DbContext
     {
+        public NominaDB(DbContextOptions<NominaDB> options)
+            : base(options)
+        {
+            
+        }
         public DbSet<Personal> Personales { get; set; }
         public DbSet<Decimo_Tercero> Decimo_Terceros { get; set; }
         public DbSet<Decimo_Cuarto> Decimo_Cuartos { get; set; }
@@ -18,21 +23,21 @@ namespace ModeloDB
         public DbSet<Roles> Roles { get; set; }
 
 
-        override protected void OnConfiguring(DbContextOptionsBuilder options)
+        /*override protected void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(
                 "server=DESKTOP-FAR92HR; initial catalog=SGA1; trusted_connection=true;"
                 );
-        }
-        public NominaDB() : base()
+        }*/
+        /*public NominaDB() : base()
         {
 
-        }
-        public NominaDB(DbContextOptions<NominaDB> opciones)
+        }*/
+        /*public NominaDB(DbContextOptions<NominaDB> opciones)
             : base(opciones)
         {
 
-        }
+        }*/
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Relacion uno a muchos, personal y decimo tercero

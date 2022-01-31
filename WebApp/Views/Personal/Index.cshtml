@@ -1,0 +1,76 @@
+﻿@using  Modelo.Entidades;
+
+@model IEnumerable<Personal>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Personal</h1>
+<p>A continuacion se presenta la lista de Personal del Sistema de Nomina</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h3>Personal</h3>
+        </div>
+        <div class="col-sm-4">
+            <a class="btn btn-success d-block" asp-controller="Personal" asp-action="Create">Crear Nuevo Personal</a>
+        </div>
+    </div>
+    <p>
+        <br />
+    </p>
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-aria-hidden="true">
+                    &times;
+                </span>
+            </button>
+
+        </div>
+    }
+
+    <div class="row">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td align="center">Codigo Personal</td>
+                    <td align="center">Nombre Personal</td>
+                    <td align="center">Telefono</td>
+                    <td align="center">No Cedula</td>
+                    <td align="center">Estado Civil</td>
+                    <td align="center">Sueldo</td>
+                    <td align="center">Acciones</td>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (Personal personal in Model)
+                {
+                    <tr>
+                        <td align="center">@personal.PersonalId</td>
+                        <td align="center">@personal.nombre</td>
+                        <td align="center">@personal.telefono</td>
+                        <td align="center">@personal.no_documento</td>
+                        <td align="center">@personal.estado_civil </td>
+                        <td align="center">@personal.sueldo </td>
+                        <td>
+                            <div align="center">
+                                <a class="btn btn-warning " asp-controller="Personal" asp-action="Edit" asp-route-id="@personal.PersonalId">Editar</a>
+                                <a class="btn btn-danger " asp-controller="Personal" asp-action="Delete" asp-route-id="@personal.PersonalId">Eliminar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

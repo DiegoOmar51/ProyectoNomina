@@ -1,0 +1,55 @@
+﻿@using Modelo.Entidades;
+
+@model Personal 
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Actualizacion del Personal</h1>
+<p>A continuacion se actualizara el personal al Sistema de Nomina</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Actualizar el Personal: @Model.nombre</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Edit">
+                <input type="hidden" asp-for="PersonalId" />
+                <div class="form-group">
+                    <label class="control-label">Nombre</label>
+                    <input class="form-control" asp-for="nombre" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Telefono</label>
+                    <input class="form-control" asp-for="telefono" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">No Cedula</label>
+                    <input class="form-control" asp-for="no_documento" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Sueldo</label>
+                    <input class="form-control" asp-for="sueldo" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Estado Civil</label>
+                    <input class="form-control" asp-for="estado_civil" />
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Actualizar Personal"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModeloDB", "ModeloDB\Modelo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CargaDatos", "CargaDatos\CargaDatos.csproj", "{12B74E72-746C-4FB7-9987-803F31E45547}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{7365ACF9-3A38-4A81-8204-E3381EA7182F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{6FA5019D-BC03-4C69-A2D5-18399255C59D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{12B74E72-746C-4FB7-9987-803F31E45547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12B74E72-746C-4FB7-9987-803F31E45547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12B74E72-746C-4FB7-9987-803F31E45547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7365ACF9-3A38-4A81-8204-E3381EA7182F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7365ACF9-3A38-4A81-8204-E3381EA7182F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7365ACF9-3A38-4A81-8204-E3381EA7182F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7365ACF9-3A38-4A81-8204-E3381EA7182F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA5019D-BC03-4C69-A2D5-18399255C59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA5019D-BC03-4C69-A2D5-18399255C59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA5019D-BC03-4C69-A2D5-18399255C59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA5019D-BC03-4C69-A2D5-18399255C59D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
